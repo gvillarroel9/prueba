@@ -1,0 +1,48 @@
+<app-menu></app-menu>
+<div class="container">
+  <div class="col-md-12">
+    <div class="card">
+      <!--Card content-->
+      <div class="card-body text-center">
+        <!--Title-->
+        <div>
+          <h4 class="card-title" style="display: inline;">{{titulo}}</h4> 
+          <form #formUsuario="ngForm" (ngSubmit)="onSubmit()" class="col-lg-6 formularios" id="frmUsuario">
+            <div class="md-form">
+              <label>
+                Nombre
+                <span *ngIf="!nombre.valid && nombre.touched" class="avisoInput">El campo nombre es obligatorio</span>
+              </label> 
+              <input type="text" class="form-control" #nombre="ngModel" name="nombre" 
+                     [(ngModel)]="usuario.nombre" required class="form-control" mdbActive/>
+            </div>
+            <div class="md-form">
+              <label>
+                Nombre Usuario
+                <span *ngIf="!nombreUsuario.valid && nombreUsuario.touched" class="avisoInput">El campo nombre usuario es obligatorio</span>
+              </label>
+              <input type="text" class="form-control" #nombreUsuario="ngModel" name="nombreUsuario" 
+                     [(ngModel)]="usuario.nombreUsuario" required class="form-control" mdbActive/>
+            </div>
+            <div class="md-form">
+              <label>
+                Email
+                <span *ngIf="!correoelectronico.valid && correoelectronico.touched" class="avisoInput">El campo correoelectronico es obligatorio</span>
+              </label>
+              <input type="text" class="form-control" #correoelectronico="ngModel" name="correoelectronico" 
+              [(ngModel)]="usuario.correoelectronico" required class="form-control" mdbActive/>
+            </div>
+            <div class="md-form">
+              <label>Teléfono</label>
+              <input type="text" class="form-control" #telefono="ngModel" name="telefono" 
+                     [(ngModel)]="usuario.telefono" class="form-control" mdbActive/>
+            </div>
+            <br/>
+            <input type="submit" value="Aceptar" [disabled]="!formUsuario.form.valid" class="btn btn-success"/>
+            
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

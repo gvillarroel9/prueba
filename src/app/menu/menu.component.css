@@ -1,0 +1,15 @@
+/* :host {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.divNombreUsuario{
+    font-size: 20px;
+    color: blue;
+    float: right;
+} */
+.saludo{
+    font-size: 20px;
+    color: white;
+}

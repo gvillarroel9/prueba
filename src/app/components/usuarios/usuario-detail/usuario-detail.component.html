@@ -1,0 +1,38 @@
+<app-menu></app-menu>
+<div class="container">
+  <div class="col-md-12">
+    <div class="card">
+      <!--Card content-->
+      <div class="card-body text-center">
+        <!--Title-->
+        <div>
+          <h4 class="card-title" style="display: inline;">{{titulo}}</h4>   
+          <div *ngIf="!usuario">
+            <p>Cargando usuario...</p>
+          </div>
+          <div *ngIf="usuario" class="card-body text-left">
+            <h2>{{usuario.nombre}}</h2>
+            <br/>
+            <div class="col-lg-9">
+              <p>
+                <strong>ID:</strong> {{usuario.id}}
+              </p>
+              <p>
+                <strong>Nombre:</strong> {{usuario.nombre}}
+              </p>
+              <p>
+                <strong>Nombre Usuario:</strong> {{usuario.nombreUsuario}}
+              </p>
+              <p>
+                <strong>Email:</strong> {{usuario.correoelectronico}}
+              </p>
+              <p>
+                <strong>Teléfono:</strong> {{usuario.telefono}}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
